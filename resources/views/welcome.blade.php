@@ -56,9 +56,9 @@
           <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
           <div class="flex-center position-ref full-height">
           
-            @if (Route::has('login'))
+            
                 <div class="top-right links">
-                    
+            @if (Route::has('login'))        
                     @auth
                         <a href="{{ url('/home') }}" class="btn btn-success" role="button" >Home</a>
                     @else
