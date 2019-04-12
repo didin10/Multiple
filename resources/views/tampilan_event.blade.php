@@ -61,7 +61,7 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section bg-light">
-      
+      <div class="container">
       <div class="row">
         <div class="col-lg-12">
           
@@ -105,6 +105,7 @@
             </div>
  </tbody>
 </table>
+</div>
 </div>
 </div>
 </div>
