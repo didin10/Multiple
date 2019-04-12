@@ -35,8 +35,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{{ url('/tampilan_event') }}">Event</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">Tentang</a>
             </li>
+            
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#projects">Deskripsi</a>
             </li>
@@ -88,6 +92,8 @@
         <img src="img/ipad.jpg" class="img-fluid" alt="">
       </div>
     </section>
+
+    
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section bg-light">
