@@ -17,60 +17,18 @@
       <h2>Edit Event</h2><br/>
       
     
-      <form method="post" action="{{url('Events')}}" enctype="multipart/form-data">
-        {{ csrf_field() }}
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
-            <label for="id">Id Event </label>
-            <input type="text" class="form-control" name="id">
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label for="nama_event">Nama Event</label>
-              <input type="text" class="form-control" name="nama_event">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label for="tgl_event">Tanggal Events</label>
-              <input type="text" class="form-control" name="tgl_event">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label for="batas_umur">Batas Umur</label>
-              <input type="text" class="form-control" name="batas_umur">
-            </div>
-        </div>
-          
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label for="keterangan">Keterangan</label>
-              <input type="date" class="form-control" name="keterangan">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label for="organizer">Organizer</label>
-              <input type="date" class="form-control" name="organizer">
-            </div>
-        </div>  
-        
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4" style="margin-top:80px">
-            <button type="submit" class="btn btn-success">Submit</button>
-          </div>
-        </div>
-      </form>
+      @foreach($even as $row)
+  <form action="/Events/update" method="post">
+    {{ csrf_field() }}
+    <input type="hidden" name="id" value="{{ $row->id }}"> <br/>
+    Nama Event <input type="text" required="required" name="nama_event" value="{{ $row->nama_event }}"> <br/>
+    Tanggal Event <input type="date" required="required" name="tgl_event" value="{{ $row->tgl_event }}"> <br/>
+    Batas Umur <input type="text" required="required" name="batas_umur" value="{{ $row->batas_umur }}"> <br/>
+    Keterangan <input type="text" required="required" name="keterangan" value="{{ $row->keterangan }}"> <br/>
+    Organizer <input type="text" required="required" name="organizer" value="{{ $row->organizer }}"> <br/>
+    <input type="submit" value="Simpan Data">
+  </form>
+  @endforeach
     </div> 
 
           </div>

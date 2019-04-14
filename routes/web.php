@@ -25,6 +25,11 @@ Route::get('/Adminlfc/Data_Lapangan','MenuAdmin1Controller@indexlapangan');
 Route::resource('/Members','MemberController');
 
 Route::resource('/Events','EventController');
+Route::get('/Events/create','EventController@create');
+Route::post('/Events/store','EventController@store');
+Route::get('/Events/edit/{id}','EventController@edit');
+Route::post('/Events/update','EventController@update');
+Route::get('/Events/hapus/{id}','EventController@hapus');
 
 
 Route::get('/Adminlfc/Data_Booking','BookingController@index');

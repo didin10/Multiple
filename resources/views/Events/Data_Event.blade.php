@@ -8,6 +8,7 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Data Event</h3>
+              <a href="/Events/create"> + Tambah Pegawai Baru</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -36,14 +37,9 @@
             <td>{{ $row->keterangan }}</td>
             <td>{{ $row->organizer }}</td>
                   <td>
-            <a href="{{ action('EventController@edit',['id'=>$row->id]) }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
-      <form action="{{ action('EventController@destroy',['id'=>$row->id]) }}" method="POST">
-       {{ csrf_field() }}
-       {{ method_field('DELETE') }}
-       <button class="btn btn-xs btn-danger" type="submit">
-        <i class="glyphicon glyphicon-trash"></i>
-       </button>   
-      </form> 
+            <a href="/Events/edit/{{ $row->id }}">Edit</a>
+    |
+    <a href="/Events/hapus/{{ $row->id }}">Hapus</a>
      </td>
    </tr>
    @endforeach

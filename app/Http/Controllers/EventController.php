@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Events;
+
 use Illuminate\Support\Facades\DB;
 use \Validator,\Input,\Redirect,\Session;
 
@@ -17,8 +17,8 @@ class EventController extends Controller
     public function index()
     {
 
-         $even = Events::all();
-         return view('Events.Data_Event',compact('even'));
+         $even = DB::table('events')->get();
+         return view('Events.Data_Event',['even' => $even]);
     }
 
     /**
@@ -39,15 +39,13 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        $even = new events;
-        $even->id = $request->id;
-        $even->nama_event = $request->nama_event;
-        $even->tgl_event = $request->tgl_event;
-        $even->batas_umur = $request->batas_umur;
-        $even->keterangan = $request->keterangan;
-        $even->organizer = $request->organizer;
-
-        $even->save();
+        DB::table('events')->insert([
+        'nama_event' => $request->nama_event,
+        'tgl_event' => $request->tgl_event,
+        'batas_umur' => $request->batas_umur,
+        'keterangan' => $request->keterangan,
+        'organizer' => $request->organizer
+    ]);
        // \Session::flash('flash_message','Data Berhasil di Simpan');
         return redirect('/Events');
     }
@@ -71,7 +69,9 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        return view('Events.editevents');
+        $even = DB::table('events')->where('id',$id)->get();
+
+        return view('Events.editevents',['even' => $even]);
     }
 
     /**
@@ -81,17 +81,16 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $even = events::find($id);
-        $even->id = $request->id;
-        $even->nama_event = $request->nama_event;
-        $even->tgl_event = $request->tgl_event;
-        $even->batas_umur = $request->batas_umur;
-        $even->keterangan = $request->keterangan;
-        $even->organizer = $request->organizer;
-
-        $even->save();
+       
+        DB::table('events')->where('id',$request->id)->update([
+        'nama_event' => $request->nama_event,
+        'tgl_event' => $request->tgl_event,
+        'batas_umur' => $request->batas_umur,
+        'keterangan' => $request->keterangan,
+        'organizer' => $request->organizer
+    ]);
        // \Session::flash('flash_message','Data Berhasil di Update');
         return redirect('/Events');
     }
@@ -102,9 +101,13 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    // method untuk hapus data pegawai
+    public function hapus($id)
     {
-        $even = Events::destroy($id);
-        return redirect('/Events');   
+    // menghapus data pegawai berdasarkan id yang dipilih
+    DB::table('events')->where('id',$id)->delete();
+        
+    // alihkan halaman ke halaman pegawai
+    return redirect('/Events');
     }
 }

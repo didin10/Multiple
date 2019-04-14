@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('lama/css/app.css') }}" rel="stylesheet">
 </head>
-<body background="2.jpg">
+<body background="{{ asset('img/bgl.jpg') }}">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
