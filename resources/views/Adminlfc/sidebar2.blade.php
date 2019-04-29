@@ -60,7 +60,7 @@
           <ul class="treeview-menu">
             <li><a href="{{ url('/Admin/formadmin') }}"><i class="fa fa-circle-o"></i> Form Booking</a></li>
             <li><a href="{{ action('EventController@create') }}"><i class="fa fa-circle-o"></i> Form Event</a></li>
-            <li><a href="{{ url('/Admin/formadmin') }}"><i class="fa fa-circle-o"></i> Form Members</a></li>
+            <li><a href="{{ action('MemberController@create') }}"><i class="fa fa-circle-o"></i> Form Members</a></li>
             
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Form Lapangan</a></li>
           </ul>

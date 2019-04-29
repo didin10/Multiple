@@ -26,7 +26,7 @@
                 <h5 class="mt-0 mb-1" ><font face="Comic Sans MS"><b> Member Aplikasi<b></h5>
                 Daftarkan diri anda sebagai members Aplikasi Booking Futsal karena ada diskon Menarik disetiap Pekannya</font>
                 <br>
-                <a href="" class="btn btn-success" role="button">Daftar</a>
+                <a href="{{ url('/MemberBR') }}" class="btn btn-success" role="button">Daftar</a>
                 </div>
                 </li>
 

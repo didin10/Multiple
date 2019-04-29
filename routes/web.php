@@ -23,6 +23,17 @@ Route::prefix('admin')->group(function() {
 Route::get('/Adminlfc/Data_Lapangan','MenuAdmin1Controller@indexlapangan');
 
 Route::resource('/Members','MemberController');
+Route::get('/Members/create','MemberController@create');
+Route::post('/Members/store','MemberController@store');
+Route::get('/Members/edit/{id}','MemberController@edit');
+Route::post('/Members/update','MemberController@update');
+Route::get('/Members/hapus/{id}','MemberController@hapus');
+
+Route::resource('/MemberBR','MemberkuController');
+Route::get('/MemberBR/create','MemberkuController@create');
+Route::post('/MemberBR/store','MemberkuController@store');
+
+
 
 Route::resource('/Events','EventController');
 Route::get('/Events/create','EventController@create');

@@ -17,15 +17,9 @@
       <h2>Tambah Member Baru</h2><br/>
       
     
-      <form method="post" action="{{url('Events')}}" enctype="multipart/form-data">
+      <form method="post" action="{{url('Members')}}" enctype="multipart/form-data">
         {{ csrf_field() }}
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
-            <label for="id">Id Members </label>
-            <input type="text" class="form-control" name="id">
-          </div>
-        </div>
+        
         <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
@@ -58,8 +52,8 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-              <label for="keterangan">Tanggal Daftar</label>
-              <input type="date" class="form-control" name="keterangan">
+              <label for="tgl_daftar">Tanggal Daftar</label>
+              <input type="date" class="form-control" name="tgl_daftar">
             </div>
         </div>
 

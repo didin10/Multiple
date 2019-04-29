@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Members;
+
 use Illuminate\Support\Facades\DB;
 use \Validator,\Input,\Redirect,\Session;
 
@@ -16,8 +16,8 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $memberku = Members::all();
-         return view('Members.Data_Member',compact('memberku'));
+        $memberku = DB::table('member')->get();
+         return view('Members.Data_Member',['memberku' => $memberku]);
     }
 
     /**
@@ -29,6 +29,7 @@ class MemberController extends Controller
     {
         return view('Members.Create');
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -38,15 +39,14 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        $memberku = new member;
-        $memberku->id = $request->id;
-        $memberku->nama_member = $request->nama_member;
-        $memberku->alamat = $request->alamat;
-        $memberku->umur = $request->umur;
-        $memberku->telfon = $request->telfon;
-        $memberku->tgl_daftar = $request->tgl_daftar;
-
-        $even->save();
+       
+       DB::table('member')->insert([
+        'nama_member' => $request->nama_member,
+        'alamat' => $request->alamat,
+        'umur' => $request->umur,
+        'telfon' => $request->telfon,
+        'tgl_daftar' => $request->tgl_daftar
+    ]);
        // \Session::flash('flash_message','Data Berhasil di Simpan');
         return redirect('/Members');
     }
@@ -70,7 +70,8 @@ class MemberController extends Controller
      */
     public function edit($id)
     {
-        return view('Members.editmember');
+        $memberku = DB::table('member')->where('id',$id)->get();
+        return view('Members.editmember',['memberku' => $memberku]);
     }
 
     /**
@@ -80,17 +81,13 @@ class MemberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $memberku = member::find($id);
-        $memberku->id = $request->id;
-        $memberku->nama_member = $request->nama_member;
-        $memberku->alamat = $request->alamat;
-        $memberku->umur = $request->umur;
-        $memberku->telfon = $request->telfon;
-        $memberku->tgl_daftar = $request->tgl_daftar;
-
-        $even->save();
+       DB::table('member')->where('id',$request->id)->update(['nama_member' => $request->nama_member,'alamat' => $request->alamat,
+        'umur' => $request->umur,
+        'telfon' => $request->telfon,
+        'tgl_daftar' => $request->tgl_daftar      
+       ]);
        // \Session::flash('flash_message','Data Berhasil di Simpan');
         return redirect('/Members');
     }
@@ -101,9 +98,12 @@ class MemberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+   public function hapus($id)
     {
-        $memberku = Members::destroy($id);
-       return redirect('/Members');
+    // menghapus data pegawai berdasarkan id yang dipilih
+    DB::table('member')->where('id',$id)->delete();
+        
+    // alihkan halaman ke halaman pegawai
+    return redirect('/Members');
     }
 }
