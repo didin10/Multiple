@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Members;
+use App\Pembokingan;
+
 
 class BookingController extends Controller
 {
@@ -13,7 +17,8 @@ class BookingController extends Controller
      */
     public function index()
     {
-        return view('/Adminlfc/Data_Booking');
+        $bkg = Pembokingan::with(['get_member'])->get();
+        return view('Pembokingan.DataBooking',compact('bkg'));
     }
 
     /**
@@ -23,7 +28,8 @@ class BookingController extends Controller
      */
     public function create()
     {
-        //
+        $data = Members::all();
+        return view('Pembokingan.AddBooking', compact('data'));
     }
 
     /**
@@ -34,7 +40,18 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('booking')->insert([
+        'id_booking' => $request->id_booking,
+        'tgl_booking' => $request->tgl_booking,
+        'waktu_booking' => $request->waktu_booking,
+        'uang_muka' => $request->uang_muka,
+        'biaya_booking' => $request->biaya_booking,
+        'status' => $request->status,
+        'member_id' => $request->member_id
+
+
+        ]);
+        return redirect('/DataBooking');
     }
 
     /**

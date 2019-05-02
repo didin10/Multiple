@@ -38,6 +38,9 @@
               <a class="nav-link js-scroll-trigger" href="{{ url('/tampilan_event') }}">Event</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{{ url('/DataBooking') }}">btfav</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">Tentang</a>
             </li>
             

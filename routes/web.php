@@ -43,6 +43,13 @@ Route::post('/Events/update','EventController@update');
 Route::get('/Events/hapus/{id}','EventController@hapus');
 
 
-Route::get('/Adminlfc/Data_Booking','BookingController@index');
+Route::get('/DataBooking','BookingController@index');
+Route::get('/TambahBooking','BookingController@create');
+Route::post('/TambahdataBooking','BookingController@store');
+Route::get('/Edit/{id_booking}','BookingController@edit');
+Route::post('/Update','BookingController@update');
+Route::get('/Hapus/{id_booking}','BookingController@hapus');
+
+
 
 Route::get('/tampilan_event','TampilanEventController@index');
