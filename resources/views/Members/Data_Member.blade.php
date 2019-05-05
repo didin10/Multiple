@@ -14,13 +14,14 @@
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Id Member</th>
-                  <th>Nama Member</th>
-                  <th>Alamat Member</th>
-                  <th>Umur Member</th>
-                  <th>No.hp Member</th>
-                  <th>Tanggal Daftar</th>
-                  <th>Action</th>
+
+                  <th><center>Id Member</center></th>
+                  <th><center>Nama Member</center></th>
+                  <th><center>Alamat Member</center></th>
+                  <th><center>Umur Member</center></th>
+                  <th><center>No.hp Member</center></th>
+                  <th><center>Tanggal Daftar</center></th>
+                  <th><center>Action</center></th>
                   
                 </tr>
                 </thead>
@@ -28,17 +29,18 @@
                   @foreach($memberku as $row)
                   
                 <tr>
-            <td>{{ $row->id }}</td>
-            <td>{{ $row->nama_member }}</td>
-            <td>{{ $row->alamat }}</td>
-            <td>{{ $row->umur }}</td>
-            <td>{{ $row->telfon }}</td>
-            <td>{{ $row->tgl_daftar }}</td>
-                  <td>
-            <a href="/Members/edit/{{ $row
+            <td><center>{{ $row->id }}</center></td>
+            <td><center>{{ $row->nama_member }}</center></td>
+            <td><center>{{ $row->alamat }}</center></td>
+            <td><center>{{ $row->umur }}</center></td>
+            <td><center>{{ $row->telfon }}</center></td>
+            <td><center>{{ $row->tgl_daftar }}</center></td>
+                  <td><center>
+            <a class="btn btn-success" href="/Members/edit/{{ $row
             ->id }}">Edit</a>
         |
-        <a href="/Members/hapus/{{ $row->id }}">Hapus</a>
+        <a class="btn btn-success" href="/Members/hapus/{{ $row->id }}">Hapus</a>
+      </center>
       </td>
      </td>
    </tr>

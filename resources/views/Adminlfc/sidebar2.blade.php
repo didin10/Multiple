@@ -58,7 +58,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('/Admin/formadmin') }}"><i class="fa fa-circle-o"></i> Form Booking</a></li>
+            <li><a href="{{url('TambahBooking')}}"><i class="fa fa-circle-o"></i> Form Booking</a></li>
             <li><a href="{{ action('EventController@create') }}"><i class="fa fa-circle-o"></i> Form Event</a></li>
             <li><a href="{{ action('MemberController@create') }}"><i class="fa fa-circle-o"></i> Form Members</a></li>
             
@@ -73,7 +73,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('/Adminlfc/Data_Booking') }}"><i class="fa fa-circle-o"></i> Tabel Booking</a></li>
+           
             
             
             <li><a href="{{ url('/Adminlfc/Data_Lapangan') }}"><i class="fa fa-circle-o"></i> Tabel Lapangan</a></li>
@@ -93,7 +93,8 @@
         <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">Data-data</li>
         <li><a href="{{ url('/Members') }}"><i class="fa fa-circle-o text-red"></i> <span>Data Member</span></a></li>
-        <li><a href="{{ url('/Events') }}"><i class="fa fa-circle-o text-yellow"></i> <span>Data Event</span></a></li>
+        <li><a href="{{ url('/DataBooking') }}"><i class="fa fa-circle-o text-yellow"></i> <span>Data Booking</span></a></li>
+        <li><a href="{{ url('/Events') }}"><i class="fa fa-circle-o text-green"></i> <span>Data Event</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
       </ul>
     </section>

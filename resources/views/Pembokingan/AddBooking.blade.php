@@ -1,3 +1,6 @@
+@extends('Adminlfc.base3')
+@section('content')
+
 <div id="content-wrapper">
 
       <div class="container-fluid">
@@ -10,7 +13,7 @@
 
         <!-- Tabel Kategori -->
         <table class="table table-striped table-hover table-bordered">
-						<form action="/TambahdataBooking" method="post">
+            <form action="/TambahdataBooking" method="post">
                     <tr>
                         @csrf
                             <th>Tanggal Booking</th>
@@ -26,8 +29,8 @@
                             <th><input class="form-control" type="date" name="tgl_booking" required="required"> <br/></th>
                             <th><input class="form-control" type="time" name="waktu_booking" required="required"> <br/></th>
                             <th><input class="form-control" type="text" name="uang_muka" required="required"> <br/></th>
-                            <th><label>Rp</label><input class="form-control" type="text" name="biaya_booking" required="required"> <br/></th>
-                            <th><label></label><input class="form-control" type="text" name="status" required="required"> <br/></th>
+                            <th><input class="form-control" type="text" name="biaya_booking" required="required"> <br/></th>
+                            <th><input class="form-control" type="text" name="status" required="required"> <br/></th>
                             
                             
                             <th>
@@ -41,6 +44,6 @@
                                 <input class="btn btn-success" type="submit" value="Simpan Data">
                             </td>
                     </tr>
-						</form>
+                        </form>
             </table>
-                      
+                      @endsection

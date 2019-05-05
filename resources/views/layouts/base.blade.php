@@ -44,8 +44,8 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
-    </div>
+      <kbd><b>Version Baru
+ </kbd>    </div>
     <strong>Copyright &copy; 2019 <a href="">Lamongan Futsal Center</a>.</strong> All rights
     reserved.
   </footer>
