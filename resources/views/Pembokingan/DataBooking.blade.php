@@ -36,9 +36,9 @@
 
                     <td align=center>
                       
-                      <a class="btn btn-success" href="/Edit/{{ $data -> id_kamera }}" >EDIT </a>
+                      <a class="btn btn-success" href="/Edit/{{ $data -> id_booking }}" >EDIT </a>
 
-                      <a class="btn btn-success" href="/Delete/{{ $data -> id_kamera }}" >HAPUS </a>
+                      <a class="btn btn-success" href="/Hapus/{{ $data -> id_booking }}" >HAPUS </a>
                     </td>
                   </tr>
                 @endforeach

@@ -26,8 +26,8 @@
                             <th><input class="form-control" type="date" name="tgl_booking" required="required"> <br/></th>
                             <th><input class="form-control" type="time" name="waktu_booking" required="required"> <br/></th>
                             <th><input class="form-control" type="text" name="uang_muka" required="required"> <br/></th>
-                            <th><input class="form-control" type="text" name="biaya_booking" required="required"> <br/></th>
-                            <th><input class="form-control" type="text" name="status" required="required"> <br/></th>
+                            <th><label>Rp</label><input class="form-control" type="text" name="biaya_booking" required="required"> <br/></th>
+                            <th><label></label><input class="form-control" type="text" name="status" required="required"> <br/></th>
                             
                             
                             <th>

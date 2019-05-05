@@ -62,7 +62,8 @@ class BookingController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Members::all();
+        return view('Pembokingan.DataBooking');
     }
 
     /**
@@ -71,9 +72,12 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_booking)
     {
-        //
+        $merubah = Members::all();
+        $booking = DB::table('booking')->where('id_booking',$id_booking)->get();
+
+        return view('Pembokingan.editbooking',compact('merubah','booking'));
     }
 
     /**
@@ -83,9 +87,20 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        DB::table('booking')->where('id_booking',$request->id_booking)->update([
+             'id_booking'=>$request->id_booking,
+            'tgl_booking'=>$request->tgl_booking,
+            'waktu_booking'=>$request->waktu_booking,
+            'uang_muka'=>$request->uang_muka,
+            'biaya_booking'=>$request->biaya_booking,
+            'status'=>$request->status,
+            'member_id'=>$request->member_id
+
+        ]);
+
+        return redirect('/DataBooking');
     }
 
     /**
@@ -96,6 +111,7 @@ class BookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('booking')->where('id_booking',$id)->delete();
+     return redirect('/DataBooking');   
     }
 }
