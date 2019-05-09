@@ -21,6 +21,7 @@ class MemberkuController extends Controller
 
     public function store(Request $request)
     {
+        
        
        DB::table('member')->insert([
         'nama_member' => $request->nama_member,

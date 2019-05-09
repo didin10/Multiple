@@ -17,6 +17,7 @@
                     <th><center>ID BOoking</center></th>
                     <th><center>Tgl BOoking</center></th>
                     <th><center>Waktu BOoking</center></th>
+                    <th><center>Lapangan</center></th>
                     <th><center>uang muka</center></th>
                     <th><center>Biaya BOoking</center></th>
                     <th><center>Status</center></th>
@@ -31,6 +32,7 @@
                     
                     <td><center>{{ $data -> tgl_booking }}</center></td>
                     <td><center>{{ $data -> waktu_booking }}</center></td>
+                    <td><center>{{ $data -> lapangan }}</center></td>
                     <td><center>{{ $data -> uang_muka }}</center></td>
                     <td><center>{{ $data -> biaya_booking }}</center></td>
                     <td><center>{{ $data -> status }}</center></td>

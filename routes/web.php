@@ -33,7 +33,10 @@ Route::resource('/MemberBR','MemberkuController');
 Route::get('/MemberBR/create','MemberkuController@create');
 Route::post('/MemberBR/store','MemberkuController@store');
 
-
+Route::resource('/BookingP','BookingPController');
+Route::get('/TambahBookingP','BookingPController@create');
+Route::post('/TambahdataBookingP','BookingPController@store');
+Route::get('/sukses','BookingPController@index');
 
 Route::resource('/Events','EventController');
 Route::get('/Events/create','EventController@create');

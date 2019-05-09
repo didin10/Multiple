@@ -24,21 +24,21 @@
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="nama_event">Nama Event</label>
-              <input type="text" class="form-control" name="nama_event">
+              <input type="text" class="form-control" name="nama_event"required="required>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="tgl_event">Tanggal Events</label>
-              <input type="date" class="form-control" name="tgl_event">
+              <input type="date" class="form-control" name="tgl_event"required="required>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="batas_umur">Batas Umur</label>
-              <input type="text" class="form-control" name="batas_umur">
+              <input type="text" class="form-control" name="batas_umur"required="required>
             </div>
         </div>
           
@@ -46,7 +46,7 @@
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="keterangan">Keterangan</label>
-              <input type="text" class="form-control" name="keterangan">
+              <input type="text" class="form-control" name="keterangan"required="required>
             </div>
         </div>
 
@@ -54,7 +54,7 @@
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="organizer">Organizer</label>
-              <input type="text" class="form-control" name="organizer">
+              <input type="text" class="form-control" name="organizer"required="required>
             </div>
         </div>  
         

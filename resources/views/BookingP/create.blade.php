@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title> Forms Member Baru </title>
+    <title> Forms Booking Baru </title>
 
     <!-- Icons font CSS-->
     <link href="{{ asset('MB/vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all">
@@ -34,37 +34,51 @@
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Form Member baru</h2>
-                    <form method="post" action="{{url('MemberBR')}}" enctype="multipart/form-data">
+                    <h2 class="title">Form Booking Lapangan</h2>
+                    
+                    <form method="post" action="{{url('/TambahdataBookingP')}}" enctype="multipart/form-data">
         {{ csrf_field() }}
-                        <div class="input-group">
-                            <label for="nama_member">Nama Members</label>
-              <input type="text" class="form-control" name="nama_member" required="required">
+            <div class="input-group">
+            <label for="tgl_booking">Tanggal Booking</label>
+              <input type="date" class="form-control" name="tgl_booking"required="required>
                         </div>
-                        <div class="input-group">
-                        <label for="alamat">Alamat Members</label>
-              <input type="text" class="form-control" name="alamat" required="required">
-                        </div>
-                        <div class="input-group">
-                            <label for="umur">Usia</label>
-              <input type="text" class="form-control" name="umur" required="required">
-                        </div>
-                        <div class="input-group">
-                            <label for="telfon">No.Telfon</label>
-              <input type="text" class="form-control" name="telfon" required="required">
 
+            <div class="input-group">
+            <label for="waktu_booking">Jam Booking</label>
+            <input type="time" class="form-control" name="waktu_booking"required="required>
                         </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label for="tgl_daftar">Tanggal Daftar</label>
-              <input type="date" class="form-control" name="tgl_daftar" required="required">
-                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                </div>
-                            </div>
+
+            <div class="input-group">
+            <label for="lapangan">Lapangan : </label>
+            <select name="lapangan" class="form-control" value="lapangan" required="required">
+                            <option >Pilih Lapangan</option>
+                            <option >Lapangan Vinyl</option>
+                            <option >Lapangan Parquette</option>
+                            <option >Karpet Plastik</option>
+                            <option >Lapangan Taraflex</option>
+                            <option >Lapangan Sintetis</option>
+
+                                    
+                                </select>
+                        </div>
+            <div class="input-group">
+            <label for="uang_muka">Uang Muka</label>
+            <input type="text" class="form-control" name="uang_muka"required="required>
+        </div>
+
+            <div class="input-group">
+            <label for="member_id">Member :</label>
+           <select name="member_id" class="form-control">
+                        @foreach ($data as $data)
+                            <option value="{{$data->id}}">{{ $data->nama_member}}</option>
+                        @endforeach
+                            </select>
+                        </div>
+
+            
                             
-                        <div class="p-t-20">
-                            <button class="btn btn--radius btn--green" type="submit">Submit</button>
+            <div class="p-t-20">
+            <button class="btn btn--radius btn--green" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

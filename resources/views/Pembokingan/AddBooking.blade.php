@@ -19,7 +19,8 @@
                             <th>Tanggal Booking</th>
                             <th>Jam Booking</th>
                             <th>Uang Muka</th>
-                            <th>Biaya Booking</th>
+                            <th>Lapangan</th>
+                            <th>Biaya Lapangan</th>
                             <th>Status</th>
                             <th>Member Id</th>
                     </tr>
@@ -29,8 +30,27 @@
                             <th><input class="form-control" type="date" name="tgl_booking" required="required"> <br/></th>
                             <th><input class="form-control" type="time" name="waktu_booking" required="required"> <br/></th>
                             <th><input class="form-control" type="text" name="uang_muka" required="required"> <br/></th>
+                            <th> 
+                                <select name="lapangan" class="form-control" value="lapangan" required="required">
+                            <option >Pilih Lapangan</option>
+                            <option >Lapangan Vinyl</option>
+                            <option >Lapangan Parquette</option>
+                            <option >Karpet Plastik</option>
+                            <option >Lapangan Taraflex</option>
+                            <option >Lapangan Sintetis</option>
+
+                                    
+                                </select>
+                            </th>
                             <th><input class="form-control" type="text" name="biaya_booking" required="required"> <br/></th>
-                            <th><input class="form-control" type="text" name="status" required="required"> <br/></th>
+                        <th>
+                            <select name="status" class="form-control" value="status" required="required">
+                            <option >Lunas</option>
+                            <option >Belom Bayar</option>
+                            <option>DP</option>
+                            
+                            </select>
+                        </th>
                             
                             
                             <th>

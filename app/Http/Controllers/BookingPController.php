@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Members;
 use App\Pembokingan;
 
-
-class BookingController extends Controller
+class BookingPController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $bkg = Pembokingan::with(['get_member'])->get();
-        return view('Pembokingan.DataBooking',compact('bkg'));
+       return view('BookingP.sukses');
     }
 
     /**
@@ -29,7 +27,7 @@ class BookingController extends Controller
     public function create()
     {
         $data = Members::all();
-        return view('Pembokingan.AddBooking', compact('data'));
+        return view('BookingP.create', compact('data'));
     }
 
     /**
@@ -52,7 +50,7 @@ class BookingController extends Controller
 
 
         ]);
-        return redirect('/DataBooking');
+        return redirect('/sukses');
     }
 
     /**
@@ -63,8 +61,7 @@ class BookingController extends Controller
      */
     public function show($id)
     {
-        $data = Members::all();
-        return view('Pembokingan.DataBooking');
+        //
     }
 
     /**
@@ -73,12 +70,9 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id_booking)
+    public function edit($id)
     {
-        $merubah = Members::all();
-        $booking = DB::table('booking')->where('id_booking',$id_booking)->get();
-
-        return view('Pembokingan.editbooking',compact('merubah','booking'));
+        //
     }
 
     /**
@@ -88,21 +82,9 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        DB::table('booking')->where('id_booking',$request->id_booking)->update([
-             'id_booking'=>$request->id_booking,
-            'tgl_booking'=>$request->tgl_booking,
-            'waktu_booking'=>$request->waktu_booking,
-            'lapangan' => $request->lapangan,
-            'uang_muka'=>$request->uang_muka,
-            'biaya_booking'=>$request->biaya_booking,
-            'status'=>$request->status,
-            'member_id'=>$request->member_id
-
-        ]);
-
-        return redirect('/DataBooking');
+        //
     }
 
     /**
@@ -113,7 +95,6 @@ class BookingController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('booking')->where('id_booking',$id)->delete();
-     return redirect('/DataBooking');   
+        //
     }
 }

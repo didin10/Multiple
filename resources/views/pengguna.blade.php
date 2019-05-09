@@ -34,24 +34,12 @@
                 <br>
                 <ul class="list-unstyled">
                 <li class="media">
-                <img class="mr-3" src="{{ asset('img/lp.png') }}" alt="Generic placeholder image">
-                <div class="media-body">
-                <h5 class="mt-0 mb-1" ><font face="Comic Sans MS"><b> Fitur Lapangan<b></h5>
-                Menu Lapangan ini Berisi jenis-jenis dan type lapangan futsal yang anda suka</font>
-                <br>
-                <a href="" class="btn btn-success" role="button">Cek Disini</a>
-                </div>
-                </li>
-
-                <br>
-                <ul class="list-unstyled">
-                <li class="media">
                 <img class="mr-3" src="{{ asset('img/bp.png') }}" alt="Generic placeholder image">
                 <div class="media-body">
                 <h5 class="mt-0 mb-1" ><font face="Comic Sans MS"><b> Fitur Booking<b></h5>
                 Fitur ini menyediakan form untuk meboking suatu lapangan futsal </font>
                 <br>
-                <a href="" class="btn btn-success" role="button">Booking aja</a>
+                <a href="{{ url('/TambahBookingP') }}" class="btn btn-success" role="button">Booking aja</a>
                 </div>
                 </li>
 
