@@ -90,7 +90,7 @@
         </li>
 
         
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li><a href="{{ url('/Saran') }}"><i class="fa fa-book"></i> <span>Data Saran Dan Kritik</span></a></li>
         <li class="header">Data-data</li>
         <li><a href="{{ url('/Members') }}"><i class="fa fa-circle-o text-red"></i> <span>Data Member</span></a></li>
         <li><a href="{{ url('/DataBooking') }}"><i class="fa fa-circle-o text-yellow"></i> <span>Data Booking</span></a></li>

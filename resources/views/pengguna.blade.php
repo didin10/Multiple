@@ -51,7 +51,7 @@
                 <h5 class="mt-0 mb-1" ><font face="Comic Sans MS"><b> Fitur Saran<b></h5>
                 Fitur Ini Berisi Tentang Apakah Anda Memiliki Saran Kepada Pihak Lamongan Futsal Center</font>
                 <br>
-                <a href="" class="btn btn-success" role="button">Kirim Saran</a>
+                <a href="{{ url('/Tambahsaran') }}" class="btn btn-success" role="button">Kirim Saran</a>
                 </div>
                 </li>
 

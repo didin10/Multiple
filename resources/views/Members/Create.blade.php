@@ -24,28 +24,28 @@
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="nama_member">Nama Members</label>
-              <input type="text" class="form-control" name="nama_member"required="required>
+              <input type="text" class="form-control" name="nama_member"required="required">
             </div>
         </div>
         <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="alamat">Alamat Members</label>
-              <input type="text" class="form-control" name="alamat"required="required>
+              <input type="text" class="form-control" name="alamat"required="required">
             </div>
         </div>
         <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="umur">Usia</label>
-              <input type="text" class="form-control" name="umur"required="required>
+              <input type="text" class="form-control" name="umur"required="required">
             </div>
         </div>
         <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="telfon">No.Telfon</label>
-              <input type="text" class="form-control" name="telfon"required="required>
+              <input type="text" class="form-control" name="telfon"required="required">
             </div>
         </div>
           
@@ -53,7 +53,7 @@
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="tgl_daftar">Tanggal Daftar</label>
-              <input type="date" class="form-control" name="tgl_daftar"required="required>
+              <input type="date" class="form-control" name="tgl_daftar"required="required">
             </div>
         </div>
 
