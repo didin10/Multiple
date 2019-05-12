@@ -2,10 +2,10 @@
 @section('content')
 
 <section class="content">
-      <div class="row">
+        <div class="row">
         <div class="col-lg-12">
           
-          <div class="box">
+            <div class="box">
             <div class="box-header">
               <h3 class="box-title">Data Event</h3>
               <a href="/Events/create"> + Tambah Pegawai Baru</a>
@@ -39,14 +39,15 @@
                   <td>
             <a class="btn btn-success" href="/Events/edit/{{ $row->id }}">Edit</a>
     
-    <a class="btn btn-success" href="/Events/hapus/{{ $row->id }}">Hapus</a>
+            <a class="btn btn-success" href="/Events/hapus/{{ $row->id }}">Hapus</a>
      </td>
-   </tr>
+     </tr>
    @endforeach
-</tr>
-            </div>
+     </tr>
+     </div>
  </tbody>
 </table>
+
 Halaman : {{ $even->currentPage() }} <br/>
   Jumlah Data : {{ $even->total() }} <br/>
   Data Per Halaman : {{ $even->perPage() }} <br/>

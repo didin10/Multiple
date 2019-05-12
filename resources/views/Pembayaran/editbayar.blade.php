@@ -35,14 +35,14 @@
     <section id="projects" class="projects-section bg-light">
       <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+      <div class="col-lg-12">
           
           <!-- Tabel Kategori -->
-        <div class="card mb-3">
+          <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
             Data Bayar</div>
-          <div class="card-body">
+            <div class="card-body">
             <div class="table-responsive">
             <table class="table table-striped table-hover table-bordered">
             @foreach ($bayar as $data)
@@ -107,12 +107,12 @@
                 </tbody>
                 </form>
               </table>
-          </div>
         </div>
-      </div>
-</div>
-</div>
-</div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
           <!-- /.box -->
            <!-- /.row -->
     </section>

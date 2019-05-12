@@ -53,7 +53,7 @@
                 </tbody>
               </table>
               <br/>
-  Halaman : {{ $bkg->currentPage() }} <br/>
+   Halaman : {{ $bkg->currentPage() }} <br/>
   Jumlah Data : {{ $bkg->total() }} <br/>
   Data Per Halaman : {{ $bkg->perPage() }} <br/>
  

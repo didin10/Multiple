@@ -28,20 +28,19 @@
 
 <body>
   
-    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
-
-        <div class="wrapper wrapper--w680">
-            <div class="card card-1">
-                <div class="card-heading"></div>
-                <div class="card-body">
-                    <h2 class="title">Form Booking Lapangan</h2>
+<div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+<div class="wrapper wrapper--w680">
+<div class="card card-1">
+<div class="card-heading"></div>
+<div class="card-body">
+<h2 class="title">Form Booking Lapangan</h2>
                     
-                    <form method="post" action="{{url('/TambahdataBookingP')}}" enctype="multipart/form-data">
+<form method="post" action="{{url('/TambahdataBookingP')}}" enctype="multipart/form-data">
         {{ csrf_field() }}
-            <div class="input-group">
-            <label for="tgl_booking">Tanggal Booking</label>
-              <input type="date" class="form-control" name="tgl_booking"required="required">
-                        </div>
+<div class="input-group">
+<label for="tgl_booking">Tanggal Booking</label>
+<input type="date" class="form-control" name="tgl_booking"required="required">
+</div>
 
             <div class="input-group">
             <label for="waktu_booking">Jam Booking</label>
@@ -83,12 +82,12 @@
                             
             <div class="p-t-20">
             <button class="btn btn--radius btn--green" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
 
     <!-- Jquery JS-->
     <script src="MB/vendor/jquery/jquery.min.js"></script>

@@ -5,14 +5,14 @@
     <section class="content">
       <div class="row">
         <!-- left column -->
-        <div class="col-lg-6">
+      <div class="col-lg-6">
           <!-- general form elements -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">From</h3>
+      <div class="box box-primary">
+      <div class="box-header with-border">
+      <h3 class="box-title">From</h3>
            
 
-           <div class="form-group">
+      <div class="form-group">
       
       <h2>Edit Event</h2><br/>
       
@@ -32,9 +32,9 @@
     </div> 
 
           </div>
-        </div>
-      </div>
-    </div>
+          </div>
+          </div>
+          </div>
   </section>
           <!-- /.box -->
 @endsection

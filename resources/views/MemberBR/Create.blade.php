@@ -31,46 +31,50 @@
     <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
 
         <div class="wrapper wrapper--w680">
-            <div class="card card-1">
-                <div class="card-heading"></div>
-                <div class="card-body">
-                    <h2 class="title">Form Member baru</h2>
-                    <form method="post" action="{{url('MemberBR')}}" enctype="multipart/form-data">
+        <div class="card card-1">
+        <div class="card-heading"></div>
+        <div class="card-body">
+        <h2 class="title">Form Member baru</h2>
+        <form method="post" action="{{url('MemberBR')}}" enctype="multipart/form-data">
         {{ csrf_field() }}
-                        <div class="input-group">
-                            <label for="nama_member">Nama Members</label>
+        <div class="input-group">
+              <label for="nama_member">Nama Members</label>
               <input type="text" class="form-control" name="nama_member" required="required">
-                        </div>
-                        <div class="input-group">
-                        <label for="alamat">Alamat Members</label>
+        </div>
+                        
+        <div class="input-group">
+              <label for="alamat">Alamat Members</label>
               <input type="text" class="form-control" name="alamat" required="required">
-                        </div>
-                        <div class="input-group">
-                            <label for="umur">Usia</label>
+        </div>
+                        
+        <div class="input-group">
+              <label for="umur">Usia</label>
               <input type="text" class="form-control" name="umur" required="required">
-                        </div>
-                        <div class="input-group">
-                            <label for="telfon">No.Telfon</label>
-              <input type="text" class="form-control" name="telfon" required="required">
+        </div>
+                        
+        <div class="input-group">
+               <label for="telfon">No.Telfon</label>
+               <input type="text" class="form-control" name="telfon" required="required">
 
-                        </div>
+        </div>
+                       
                         <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
+                        <div class="col-2">
+                        <div class="input-group">
                                     <label for="tgl_daftar">Tanggal Daftar</label>
-              <input type="date" class="form-control" name="tgl_daftar" required="required">
+                                    <input type="date" class="form-control" name="tgl_daftar" required="required">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                </div>
-                            </div>
+                        </div>
+                        </div>
                             
                         <div class="p-t-20">
                             <button class="btn btn--radius btn--green" type="submit">Submit</button>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
 
     <!-- Jquery JS-->
     <script src="MB/vendor/jquery/jquery.min.js"></script>
