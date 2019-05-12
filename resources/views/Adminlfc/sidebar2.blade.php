@@ -65,37 +65,15 @@
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Form Lapangan</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Tables</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-           
-            
-            
-            <li><a href="{{ url('/Adminlfc/Data_Lapangan') }}"><i class="fa fa-circle-o"></i> Tabel Lapangan</a></li>
-          </ul>
-        </li>
-        
-        
-       
-          
-       
-
-        
-          
-        </li>
 
         
         <li><a href="{{ url('/Saran') }}"><i class="fa fa-book"></i> <span>Data Saran Dan Kritik</span></a></li>
+        <li><a href="{{ url('/Datapembayaran') }}"><i class="fa fa-book"></i> <span>Data Pembayaran</span></a></li>
         <li class="header">Data-data</li>
         <li><a href="{{ url('/Members') }}"><i class="fa fa-circle-o text-red"></i> <span>Data Member</span></a></li>
         <li><a href="{{ url('/DataBooking') }}"><i class="fa fa-circle-o text-yellow"></i> <span>Data Booking</span></a></li>
         <li><a href="{{ url('/Events') }}"><i class="fa fa-circle-o text-green"></i> <span>Data Event</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+  
       </ul>
     </section>
     <!-- /.sidebar -->

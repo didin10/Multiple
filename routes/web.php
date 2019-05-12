@@ -24,8 +24,10 @@ Route::get('/Adminlfc/Data_Lapangan','MenuAdmin1Controller@indexlapangan');
 
 Route::resource('/Members','MemberController');
 Route::get('/Members/create','MemberController@create');
+Route::get('/Members/cari','MemberController@cari');
 Route::post('/Members/store','MemberController@store');
 Route::get('/Members/edit/{id}','MemberController@edit');
+Route::get('/Members/show/{id}','MemberController@show');
 Route::post('/Members/update','MemberController@update');
 Route::get('/Members/hapus/{id}','MemberController@hapus');
 
@@ -39,11 +41,7 @@ Route::post('/TambahdataBookingP','BookingPController@store');
 Route::get('/sukses','BookingPController@index');
 
 
-Route::resource('/Saran','SaranController');
-Route::get('/Tambahsaran','SaranController@create');
-Route::post('/Tambahdatasaran','SaranController@store');
-Route::get('/Hapus/{id_saran}','SaranController@destroy');
-Route::get('/sukses','SaranController@index');
+
 
 
 Route::resource('/Events','EventController');
@@ -61,6 +59,26 @@ Route::get('/Edit/{id_booking}','BookingController@edit');
 Route::post('/Update/{id_booking}','BookingController@update');
 Route::get('/Hapus/{id_booking}','BookingController@destroy');
 
+Route::get('/Datapembayaran','PembayaranController@index');
+Route::get('/Tambahbayar','PembayaranController@create');
+Route::post('/Tambahdatabayar','PembayaranController@store');
+Route::get('/cetakbayar/{id}','PembayaranController@show');
+Route::get('/Editbayar/{id}','PembayaranController@edit');
+Route::post('/Updatebayar/{id}','PembayaranController@update');
+Route::get('/Hapusbayar/{id}','PembayaranController@destroy');
+
 
 
 Route::get('/tampilan_event','TampilanEventController@index');
+
+
+Route::resource('/Saran','SaranController');
+Route::get('/Tambahsaran','SaranController@create');
+Route::post('/Tambahdatasaran','SaranController@store');
+Route::get('/Hapus/{id_saran}','SaranController@destroy');
+Route::get('/sukses','SaranController@index');
+
+
+
+
+

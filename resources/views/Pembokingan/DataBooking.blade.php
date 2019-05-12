@@ -6,21 +6,23 @@
         <div class="col-lg-12">
           <div class="box">
             <div class="box-header">
+
               <h3 class="box-title">Data Booking</h3>
-              
+              <a class="btn btn-success" href="/Tambahbayar"> Transaksi </a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th><center>ID BOoking</center></th>
-                    <th><center>Tgl BOoking</center></th>
+                    
+                    <th><center>Tgl Booking</center></th>
                     <th><center>Waktu BOoking</center></th>
                     <th><center>Lapangan</center></th>
-                    <th><center>uang muka</center></th>
-                    <th><center>Biaya BOoking</center></th>
+                    <th><center>Selesai Booking</center></th>
+                    <th><center>Nomor Booking</center></th>
                     <th><center>Status</center></th>
+                    <th><center>Gmail</center></th>
                     <th><center>Member</center></th>
                     <th><center>Opsi</center></th>
                   </tr>
@@ -28,14 +30,15 @@
                 <tbody>
                 @foreach ($bkg as $data)
                   <tr>
-                    <td><center>{{ $data -> id_booking }}</center></td>
+                    
                     
                     <td><center>{{ $data -> tgl_booking }}</center></td>
                     <td><center>{{ $data -> waktu_booking }}</center></td>
                     <td><center>{{ $data -> lapangan }}</center></td>
-                    <td><center>{{ $data -> uang_muka }}</center></td>
-                    <td><center>{{ $data -> biaya_booking }}</center></td>
+                    <td><center>{{ $data -> selesai }}</center></td>
+                    <td><center>{{ $data -> No_BK }}</center></td>
                     <td><center>{{ $data -> status }}</center></td>
+                    <td><center>{{ $data -> gmail }}</center></td>
                     <td><center>{{ $data -> get_member->nama_member }}</center></td>
 
                     <td align=center><center>
@@ -49,7 +52,14 @@
                 @endforeach
                 </tbody>
               </table>
-            </div>
+              <br/>
+  Halaman : {{ $bkg->currentPage() }} <br/>
+  Jumlah Data : {{ $bkg->total() }} <br/>
+  Data Per Halaman : {{ $bkg->perPage() }} <br/>
+ 
+ 
+  {{ $bkg->links() }}
+</div>
 </div>
 </div>
 </div>

@@ -45,6 +45,12 @@
             </div>
  </tbody>
 </table>
+Halaman : {{ $saranku->currentPage() }} <br/>
+  Jumlah Data : {{ $saranku->total() }} <br/>
+  Data Per Halaman : {{ $saranku->perPage() }} <br/>
+ 
+ 
+  {{ $saranku->links() }}
 </div>
 </div>
 </div>

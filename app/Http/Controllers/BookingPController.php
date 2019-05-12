@@ -43,14 +43,15 @@ class BookingPController extends Controller
         'tgl_booking' => $request->tgl_booking,
         'waktu_booking' => $request->waktu_booking,
         'lapangan' => $request->lapangan,
-        'uang_muka' => $request->uang_muka,
-        'biaya_booking' => $request->biaya_booking,
+        'selesai' => $request->selesai,
+        'No_BK' => $request->No_BK,
         'status' => $request->status,
+        'gmail' => $request->gmail,
         'member_id' => $request->member_id
 
 
         ]);
-        return redirect('/sukses');
+        return redirect('/home');
     }
 
     /**

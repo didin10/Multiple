@@ -17,7 +17,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $bkg = Pembokingan::with(['get_member'])->get();
+        $bkg = Pembokingan::with(['get_member'])->paginate(8);
         return view('Pembokingan.DataBooking',compact('bkg'));
     }
 
@@ -45,9 +45,10 @@ class BookingController extends Controller
         'tgl_booking' => $request->tgl_booking,
         'waktu_booking' => $request->waktu_booking,
         'lapangan' => $request->lapangan,
-        'uang_muka' => $request->uang_muka,
-        'biaya_booking' => $request->biaya_booking,
+        'selesai' => $request->selesai,
+        'No_BK' => $request->No_BK,
         'status' => $request->status,
+        'gmail' => $request->gmail,
         'member_id' => $request->member_id
 
 
@@ -95,9 +96,10 @@ class BookingController extends Controller
             'tgl_booking'=>$request->tgl_booking,
             'waktu_booking'=>$request->waktu_booking,
             'lapangan' => $request->lapangan,
-            'uang_muka'=>$request->uang_muka,
-            'biaya_booking'=>$request->biaya_booking,
+            'selesai'=>$request->selesai,
+            'No_BK'=>$request->No_BK,
             'status'=>$request->status,
+            'gmail' => $request->gmail,
             'member_id'=>$request->member_id
 
         ]);

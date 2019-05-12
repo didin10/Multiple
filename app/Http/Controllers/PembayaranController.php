@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\DB;
-use \Validator,\Input,\Redirect,\Session;
+use App\Pembayaran;
+use App\Pembokingan;
 
-class EventController extends Controller
+class PembayaranController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,8 @@ class EventController extends Controller
      */
     public function index()
     {
-
-         $even = DB::table('events')->paginate(8);
-         return view('Events.Data_Event',['even' => $even]);
+        $byr = Pembayaran::with(['get_booking'])->paginate(8);
+        return view('Pembayaran.Datapembayaran',compact('byr'));
     }
 
     /**
@@ -28,7 +27,8 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('Events.Create');
+        $data = Pembokingan::all();
+        return view('Pembayaran.AddBayar', compact('data'));
     }
 
     /**
@@ -39,15 +39,19 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        DB::table('events')->insert([
-        'nama_event' => $request->nama_event,
-        'tgl_event' => $request->tgl_event,
-        'batas_umur' => $request->batas_umur,
+        DB::table('pembayaran')->insert([
+        'id' => $request->id,
+        'bkg_id' => $request->bkg_id,
+        'jumlah' => $request->jumlah,
+        'status' => $request->status,
         'keterangan' => $request->keterangan,
-        'organizer' => $request->organizer
-    ]);
-       // \Session::flash('flash_message','Data Berhasil di Simpan');
-        return redirect('/Events');
+        'kode_transaksi' => $request->kode_transaksi,
+        'tgl_bayar' => $request->tgl_bayar
+        
+
+
+        ]);
+        return redirect('/Datapembayaran');
     }
 
     /**
@@ -58,7 +62,8 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        //
+         $byr = DB::table('pembayaran')->where('id',$id)->get();
+        return view('Pembayaran.viewbayar',['byr' => $byr]); 
     }
 
     /**
@@ -69,9 +74,10 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        $even = DB::table('events')->where('id',$id)->get();
+        $merubah = Pembokingan::all();
+        $bayar = DB::table('pembayaran')->where('id',$id)->get();
 
-        return view('Events.editevents',['even' => $even]);
+        return view('Pembayaran.editbayar',compact('merubah','bayar'));
     }
 
     /**
@@ -83,16 +89,17 @@ class EventController extends Controller
      */
     public function update(Request $request)
     {
-       
-        DB::table('events')->where('id',$request->id)->update([
-        'nama_event' => $request->nama_event,
-        'tgl_event' => $request->tgl_event,
-        'batas_umur' => $request->batas_umur,
+        DB::table('pembayaran')->where('id',$request->id)->update([
+        'id' => $request->id,
+        'bkg_id' => $request->bkg_id,
+        'jumlah' => $request->jumlah,
+        'status' => $request->status,
         'keterangan' => $request->keterangan,
-        'organizer' => $request->organizer
-    ]);
-       // \Session::flash('flash_message','Data Berhasil di Update');
-        return redirect('/Events');
+        'kode_transaksi' => $request->kode_transaksi,
+        'tgl_bayar' => $request->tgl_bayar
+        ]);
+
+        return redirect('/Datapembayaran');
     }
 
     /**
@@ -101,13 +108,9 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // method untuk hapus data pegawai
-    public function hapus($id)
+    public function destroy($id)
     {
-    // menghapus data pegawai berdasarkan id yang dipilih
-    DB::table('events')->where('id',$id)->delete();
-        
-    // alihkan halaman ke halaman pegawai
-    return redirect('/Events');
+        DB::table('pembayaran')->where('id',$id)->delete();
+     return redirect('/Datapembayaran');
     }
 }

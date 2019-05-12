@@ -16,8 +16,19 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $memberku = DB::table('member')->get();
+        $memberku = DB::table('member')->paginate(8);
          return view('Members.Data_Member',['memberku' => $memberku]);
+    }
+
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+
+        $memberku = DB::table('member')
+        ->where('nama_member','like',"%".$cari."%")
+        ->paginate();
+
+        return view('Members.Data_Member',['memberku' => $memberku]);
     }
 
     /**
@@ -59,7 +70,8 @@ class MemberController extends Controller
      */
     public function show($id)
     {
-        //
+        $memberku = DB::table('member')->where('id',$id)->get();
+        return view('Members.view',['memberku' => $memberku]); 
     }
 
     /**

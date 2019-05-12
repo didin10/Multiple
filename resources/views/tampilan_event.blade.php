@@ -102,9 +102,15 @@
    </tr>
    @endforeach
 </tr>
-            </div>
+</div>
  </tbody>
 </table>
+Halaman : {{ $even->currentPage() }} <br/>
+  Jumlah Data : {{ $even->total() }} <br/>
+  Data Per Halaman : {{ $even->perPage() }} <br/>
+ 
+ 
+  {{ $even->links() }}
 </div>
 </div>
 </div>

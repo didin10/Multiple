@@ -37,9 +37,9 @@
             <td>{{ $row->keterangan }}</td>
             <td>{{ $row->organizer }}</td>
                   <td>
-            <a href="/Events/edit/{{ $row->id }}">Edit</a>
-    |
-    <a href="/Events/hapus/{{ $row->id }}">Hapus</a>
+            <a class="btn btn-success" href="/Events/edit/{{ $row->id }}">Edit</a>
+    
+    <a class="btn btn-success" href="/Events/hapus/{{ $row->id }}">Hapus</a>
      </td>
    </tr>
    @endforeach
@@ -47,6 +47,12 @@
             </div>
  </tbody>
 </table>
+Halaman : {{ $even->currentPage() }} <br/>
+  Jumlah Data : {{ $even->total() }} <br/>
+  Data Per Halaman : {{ $even->perPage() }} <br/>
+ 
+ 
+  {{ $even->links() }}
 </div>
 </div>
 </div>

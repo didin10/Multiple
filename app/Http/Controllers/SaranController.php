@@ -15,7 +15,7 @@ class SaranController extends Controller
      */
     public function index()
     {
-        $saranku = DB::table('saran')->get();
+        $saranku = DB::table('saran')->paginate(8);
          return view('Saran.Datasaran',['saranku' => $saranku]);
     }
 

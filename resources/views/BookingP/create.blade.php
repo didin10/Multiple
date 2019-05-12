@@ -62,8 +62,12 @@
                                 </select>
                         </div>
             <div class="input-group">
-            <label for="uang_muka">Uang Muka</label>
-            <input type="text" class="form-control" name="uang_muka"required="required">
+            <label for="selesai">Selesai </label>
+            <input type="time" class="form-control" name="selesai"required="required">
+        </div>
+        <div class="input-group">
+            <label for="gmail">Gmail  </label>
+            <input type="gmail" class="form-control" name="gmail"required="required">
         </div>
 
             <div class="input-group">

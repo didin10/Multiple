@@ -9,6 +9,8 @@
               <h3 class="box-title">Data Member</h3>
               <a href="/Members/create"> + Tambah member Baru</a>
             </div>
+
+            
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example2" class="table table-bordered table-hover">
@@ -37,7 +39,10 @@
             <td><center>{{ $row->tgl_daftar }}</center></td>
                   <td><center>
             <a class="btn btn-success" href="/Members/edit/{{ $row
-            ->id }}">Edit</a>
+            ->id }}">Edit</a>|
+
+                        <a class="btn btn-success" href="/Members/show/{{ $row
+            ->id }}">Lihat</a>
         |
         <a class="btn btn-success" href="/Members/hapus/{{ $row->id }}">Hapus</a>
       </center>
@@ -49,6 +54,15 @@
             </div>
  </tbody>
 </table>
+
+<br/>
+  Halaman : {{ $memberku->currentPage() }} <br/>
+  Jumlah Data : {{ $memberku->total() }} <br/>
+  Data Per Halaman : {{ $memberku->perPage() }} <br/>
+ 
+ 
+  {{ $memberku->links() }}
+
 </div>
 </div>
 </div>

@@ -1,14 +1,3 @@
-<div id="content-wrapper">
-
-      <div class="container-fluid">
-
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">Tabel Booking</li>
-        </ol>
-        <!-- End Breadcrumbs-->
-
-        
 
       <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -52,60 +41,64 @@
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Data booking</div>
+            Data Bayar</div>
           <div class="card-body">
             <div class="table-responsive">
             <table class="table table-striped table-hover table-bordered">
-            @foreach ($booking as $data)
-              <form action="{{url('Update/'.$data->id_booking)}}" method="post">
+            @foreach ($bayar as $data)
+              <form action="{{url('Updatebayar/'.$data->id)}}" method="post">
                   <tr>
                   {{ csrf_field() }}
-                    <th>ID Booking</th>
-                    <th>Tanggal Booking</th>
-                    <th>Jam Booking</th>
-                    <th>Lapangan</th>
-                    <th>Selesai </th>
-                    <th>Nomor Booking</th>
+                    <th>ID Bayar</th>
+                    <th>Kode Booking</th>
+                    <th>Jumlah Pembayaran</th>
                     <th>Status</th>
-                    <th>Gmail</th>
-                    <th>Member</th>
+                    <th>Keterangan </th>
+                    <th>Kode Transaksi</th>
+                    <th>Tanggal Transaksi</th>
+                    
                     <th>Opsi</th>
                   </tr>
                   <tr>
                     <td>
-                      <input type="hidden" name="id_booking" value="{{ $data -> id_booking }}">
+                      <input type="hidden" name="id" value="{{ $data -> id }}">
                     </td>
                     <td>
-                      <input type="date" name="tgl_booking" value="{{ $data -> tgl_booking }}">
+                      <select name="bkg_id" class="form-control">
+                        @foreach ($merubah as $m)
+                            <option value="{{$m->id_booking}}">{{ $m->No_BK}}</option>
+                        @endforeach
+                      </select>
                     </td>
                     <td>
-                      <input type="time" name="waktu_booking" value="{{ $data -> waktu_booking }}">
+                      <input type="text" name="jumlah" value="{{ $data -> jumlah }}">
+                    </td>
+      
+                    <td> 
+                            <select name="status" class="form-control" value="{{ $data -> status }}" required="required">
+                            <option >Proses</option>
+                            <option >Jadi</option>
+                            <option >Batal</option>
+                            </select>
+                            </td>
+                   <th> 
+                                <select name="keterangan" class="form-control" value="{{ $data -> keterangan }}" required="required">
+                            <option >Segerah Melakukan Transaksi BNI 0865xxxx AT.LFC </option>
+                            <option >Segerah Melakukan Transaksi BRI 0465xxxx AT.LFC</option>
+                            <option >Segerah Melakukan Transaksi MANDIRI 01265xxxx AT.LFC</option>
+                                </select>
+                            </th>
+
+                    <td>
+                      <input type="text" name="kode_transaksi" value="{{ $data -> kode_transaksi }}">
                     </td>
                     <td>
-                      <input type="text" name="lapangan" value="{{ $data -> lapangan }}">
-                    </td>
-                    <td>
-                      <input type="time" name="selesai" value="{{ $data -> selesai }}">
-                    </td>
-                    <td>
-                      <input type="text" name="No_BK" value="{{ $data -> No_BK }}">
-                    </td>
-                    <td>
-                      <input type="text" name="status" value="{{ $data -> status }}">
-                    </td>
-                    <td>
-                      <input type="text" name="gmail" value="{{ $data -> gmail }}">
+                      <input type="date" name="tgl_bayar" value="{{ $data -> tgl_bayar }}">
                     </td>
                     
 
 
-                    <td>
-                      <select name="member_id" class="form-control">
-                        @foreach ($merubah as $m)
-                            <option value="{{$m->id}}">{{ $m->nama_member}}</option>
-                        @endforeach
-                      </select>
-                    </td>
+                    
                <td align=center>
                       <input class="btn btn-success" type="submit" value="Simpan Data">
                     </td>
@@ -114,7 +107,6 @@
                 </tbody>
                 </form>
               </table>
-                    
           </div>
         </div>
       </div>
