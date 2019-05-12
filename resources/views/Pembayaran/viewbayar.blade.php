@@ -38,7 +38,7 @@
           
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><center><kbd>Transaksi</kbd></center></h3>
+              <h3 class="box-title"><center><kbd>Nota Transaksi</kbd></center></h3>
               
             </div>
             <br>
@@ -90,8 +90,8 @@
     </section>
 
        
-
-   
+    <center><H3>Segera Melakukan Transaksi sebelum Tanggal transaksi habis </H3></center>
+    <center><h5> Lamongan - jawa Timur Indonesia </h5></center>   
 
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
