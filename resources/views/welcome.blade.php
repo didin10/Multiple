@@ -108,7 +108,7 @@
           <div class="col-xl-4 col-lg-5">
             <div class="featured-text text-center text-lg-left">
               <h4>Lapangan Futsal Vinyl</h4>
-              <p class="text-black-50 mb-0">Lapangan futsal vinyl ini biasa disebut dengan rubber karena bahan dasarnya menyerupai karet yang permukaanya lembut.  Jenis lapangan futsal yang satu ini merupakan yang paling banyak disukai oleh penggemar olahraga futsal. Hal tersebut dikarenakan bahannya yang empuk sehingga membuat kita lebih mudah dalam melakukan aksi-aksi penyelamatan terlebih bagi mereka yang suka diving.</p>
+              <p class="text-black-50 mb-0">Lapangan futsal vinyl ini biasa disebut dengan rubber karena bahan dasarnya menyerupai karet yang permukaanya lembut.  Jenis lapangan futsal yang satu ini merupakan yang paling banyak disukai oleh penggemar olahraga futsal. Hal tersebut dikarenakan bahannya yang empuk sehingga membuat kita lebih mudah dalam melakukan aksi-aksi penyelamatan terlebih bagi mereka yang suka diving.</p> <kbd> Rp</kbd> 100.000
             </div>
           </div>
         </div>
@@ -122,6 +122,7 @@
             <div class="featured-text text-center text-lg-left">
               <h4>Lapangan Futsal Parquette</h4>
               <p class="text-black-50 mb-0">Jenis Lapangan futsal ini lebih populer di daerah Eropa, Amerika Latin dan kurang begitu populer di Indonesia. Lapangan jenis ini sebenarnya sudah cukup lama digunakan dan biasanya dipakai di GOR (Gelanggang Olahraga). Beberapa lapangan basket juga banyak yang memakai bahan ini karena material lapangan ini sendiri terbuat dari kayu yang mampu memantulkan bola dengan baik. </p>
+            <kbd> Rp</kbd> 110.000
             </div>
           </div>
         </div>
@@ -135,6 +136,7 @@
             <div class="featured-text text-center text-lg-left">
               <h4>Lapangan Futsal Karpet Plastik</h4>
               <p class="text-black-50 mb-0">Lapangan jenis ini memiliki bahan dasar yang sama dengan jenis lapangan taraflex, yaitu polyethyle. Yang menjadi pembeda keduanya adalah lapangan futsal dengan jenis ini terdiri dari banyak lembaran yang bisa dibongkar pasang sehingga membuat lapangan ini memiliki nilai ekonomis yang tinggi karena mudah dipindah tempatkan serta memiliki daya tahan yang lama.</p>
+            <kbd> Rp</kbd> 120.000
             </div>
           </div>
         </div>
@@ -150,6 +152,7 @@
                 <div class="project-text w-100 my-auto text-center text-lg-left">
                   <h4 class="text-white">Lapangan Futsal Taraflex</h4>
                   <p class="mb-0 text-white-50">Jenis lapangan ini sekilas hampir sama dengan Parquette tetapi ini bahannya dari polyethylen atau biji plastik yang dipadatkan. Meskipun dari bahan plastik tetapi lapangan ini keset dan enak digunakan, sehingga tidak mudah terjatuh. Jenis lapangan ini juga sudah banyak sekali di Indonesia.</p>
+                  <kbd> Rp. 130.000 </kbd>
                   <hr class="d-none d-lg-block mb-0 ml-0">
                 </div>
               </div>
@@ -168,6 +171,7 @@
                 <div class="project-text w-100 my-auto text-center text-lg-right">
                   <h4 class="text-white">Lapangan Futsal Rumput Sintetis</h4>
                   <p class="mb-0 text-white-50">Rumput sintetis ini sebenarnya diperuntukkan untuk lapangan indoor soccer bukan untuk futsal. Jenis lapangan ini digunakan hanya untuk hiburan saja bukan untuk tujuan prestasi walaupun diantara kita mungkin pernah menemui kompetisi menggunakan lapangan rumput sintetis ini. </p>
+                  <kbd> Rp.140.000 </kbd>
                   <hr class="d-none d-lg-block mb-0 mr-0">
                 </div>
               </div>

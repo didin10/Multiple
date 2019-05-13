@@ -73,6 +73,7 @@
         <li><a href="{{ url('/Members') }}"><i class="fa fa-circle-o text-red"></i> <span>Data Member</span></a></li>
         <li><a href="{{ url('/DataBooking') }}"><i class="fa fa-circle-o text-yellow"></i> <span>Data Booking</span></a></li>
         <li><a href="{{ url('/Events') }}"><i class="fa fa-circle-o text-green"></i> <span>Data Event</span></a></li>
+        <li><a href="https://mail.google.com/mail/u/2/#inbox?compose=new"><i class="fa fa-circle-o text-blue"></i> <span>Kirim Gmail</span></a></li>
   
       </ul>
     </section>
