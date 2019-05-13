@@ -80,5 +80,6 @@ Route::get('/sukses','SaranController@index');
 
 
 
-
-
+Route::get('/upload', 'UploadController@upload');
+Route::post('/upload/proses', 'UploadController@proses_upload');
+Route::get('/Dataupload', 'UploadController@index');

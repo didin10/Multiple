@@ -46,6 +46,20 @@
                 <br>
                 <ul class="list-unstyled">
                 <li class="media">
+                <img class="mr-3" src="{{ asset('img/22.png') }}" alt="Generic placeholder image">
+                <div class="media-body">
+                <h5 class="mt-0 mb-1" ><font face="Comic Sans MS"><b> Kirim Bukti Transaksi<b></h5>
+                Setelah melakukan booking dan mendapat Gmail untuk mendapat kode unik , Segerah lah transaksi dan Upload Bukti Transaksi Disini</font>
+                <br>
+                <a href="{{ url('/upload') }}" class="btn btn-success" role="button">Kirim Bukti Transaksi</a>
+                </div>
+                </li>
+
+
+
+                <br>
+                <ul class="list-unstyled">
+                <li class="media">
                 <img class="mr-3" src="{{ asset('img/sp.png') }}" alt="Generic placeholder image">
                 <div class="media-body">
                 <h5 class="mt-0 mb-1" ><font face="Comic Sans MS"><b> Fitur Saran<b></h5>

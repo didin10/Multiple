@@ -48,6 +48,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
+             
           </ul>
         </div>
       </div>

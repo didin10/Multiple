@@ -65,8 +65,8 @@
           </ul>
         </li>
 
-        
-        <li><a href="{{ url('/Saran') }}"><i class="fa fa-book"></i> <span>Data Saran Dan Kritik</span></a></li>
+        <li><a href="{{ url('/Dataupload') }}"><i class="fa fa-picture-o"></i> <span>Bukti Pembayaran</span></a></li>
+        <li><a href="{{ url('/Saran') }}"><i class="fa fa-envelope-o"></i> <span>Data Saran Dan Kritik</span></a></li>
         <li><a href="{{ url('/Datapembayaran') }}"><i class="fa fa-book"></i> <span>Data Pembayaran</span></a></li>
         <li class="header">Data-data</li>
         <li><a href="{{ url('/Members') }}"><i class="fa fa-circle-o text-red"></i> <span>Data Member</span></a></li>
