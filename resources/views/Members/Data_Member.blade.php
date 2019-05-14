@@ -13,6 +13,12 @@
             
             <!-- /.box-header -->
             <div class="box-body">
+              <p>Cari Data Member :</p>
+          <form action="/Members/cari" method="GET">
+          <input type="text" name="cari" placeholder="Cari Nama Member .." value="{{ old('cari') }}">
+          <input type="submit" value="CARI">
+          </form>
+    
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>

@@ -21,6 +21,22 @@ class BookingController extends Controller
         return view('Pembokingan.DataBooking',compact('bkg'));
     }
 
+    public function cari(Request $request)
+    {
+        // menangkap data pencarian
+        $cari = $request->cari;
+ 
+            // mengambil data dari table pegawai sesuai pencarian data
+        $bkg = Pembokingan::with(['get_member'])
+        ->join('member', 'member.id', '=', 'booking.member_id')
+        ->where('No_BK','like',"%".$cari."%")
+        ->paginate();
+ 
+            // mengirim data pegawai ke view index
+        return view('Pembokingan.DataBooking',['bkg' => $bkg]);
+ 
+    }
+
     /**
      * Show the form for creating a new resource.
      *

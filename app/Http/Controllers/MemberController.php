@@ -24,6 +24,7 @@ class MemberController extends Controller
     {
         $cari = $request->cari;
 
+        
         $memberku = DB::table('member')
         ->where('nama_member','like',"%".$cari."%")
         ->paginate();

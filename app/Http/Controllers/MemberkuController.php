@@ -31,7 +31,7 @@ class MemberkuController extends Controller
         'tgl_daftar' => $request->tgl_daftar
     ]);
        // \Session::flash('flash_message','Data Berhasil di Simpan');
-        return redirect('/home');
+        return view('/suksesmember') ;
     }
 
 }

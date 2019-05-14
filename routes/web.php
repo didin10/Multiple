@@ -22,7 +22,8 @@ Route::prefix('admin')->group(function() {
 
 Route::get('/Adminlfc/Data_Lapangan','MenuAdmin1Controller@indexlapangan');
 
-Route::resource('/Members','MemberController');
+
+Route::get('/Members','MemberController@index');
 Route::get('/Members/create','MemberController@create');
 Route::get('/Members/cari','MemberController@cari');
 Route::post('/Members/store','MemberController@store');
@@ -58,6 +59,7 @@ Route::post('/TambahdataBooking','BookingController@store');
 Route::get('/Edit/{id_booking}','BookingController@edit');
 Route::post('/Update/{id_booking}','BookingController@update');
 Route::get('/Hapus/{id_booking}','BookingController@destroy');
+Route::get('/DataBooking/cari','BookingController@cari');
 
 Route::get('/Datapembayaran','PembayaranController@index');
 Route::get('/Tambahbayar','PembayaranController@create');
@@ -66,7 +68,7 @@ Route::get('/cetakbayar/{id}','PembayaranController@show');
 Route::get('/Editbayar/{id}','PembayaranController@edit');
 Route::post('/Updatebayar/{id}','PembayaranController@update');
 Route::get('/Hapusbayar/{id}','PembayaranController@destroy');
-
+Route::get('/Datapembayaran/cari','PembayaranController@cari');
 
 
 Route::get('/tampilan_event','TampilanEventController@index');

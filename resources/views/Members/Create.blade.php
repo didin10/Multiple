@@ -17,7 +17,7 @@
       <h2>Tambah Member Baru</h2><br/>
       
     
-      <form method="post" action="{{url('Members')}}" enctype="multipart/form-data">
+      <form method="post" action="{{url('/Members/store')}}" enctype="multipart/form-data">
         {{ csrf_field() }}
         
         <div class="row">

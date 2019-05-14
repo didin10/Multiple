@@ -22,7 +22,7 @@
                             <th>Selesai</th>
                             <th>No Boking</th>
                             <th>Status</th>
-                            <th>Gmail</th>
+                            
                             <th>Member Id</th>
                     </tr>
                     
@@ -52,8 +52,7 @@
                             
                             </select>
                         </th>
-                        <th><input class="form-control" type="gmail" name="gmail" required="required"> <br/></th>                            
-                            
+                        
                             <th>
                             <select name="member_id" class="form-control">
                         @foreach ($data as $data)

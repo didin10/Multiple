@@ -20,6 +20,22 @@ class PembayaranController extends Controller
         return view('Pembayaran.Datapembayaran',compact('byr'));
     }
 
+    public function cari(Request $request)
+    {
+        // menangkap data pencarian
+        $cari = $request->cari;
+ 
+            // mengambil data dari table pegawai sesuai pencarian data
+        $byr = Pembayaran::with(['get_booking'])
+        ->join('booking', 'booking.id_booking', '=', 'pembayaran.bkg_id')
+        ->where('kode_transaksi','like',"%".$cari."%")
+        ->paginate();
+ 
+            // mengirim data pegawai ke view index
+        return view('Pembayaran.Datapembayaran',['byr' => $byr]);
+ 
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -12,6 +12,13 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
+             <p>Cari Data Booking :</p>
+          <form action="/DataBooking/cari" method="GET">
+          <input type="text" name="cari" placeholder="Cari Kode Booking .." value="{{ old('cari') }}">
+          <input type="submit" value="CARI">
+          </form>
+    
+  <br/>
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>

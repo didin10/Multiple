@@ -30,9 +30,14 @@
       <div class="wrap-table100">
     <div class="box-header">
       <center>
+        <a href="/MemberBR/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Tambah member Baru</a>
+      </br>
+      </br>
+      
               <h2 class="box-title">Data Member <kbd> Futsal</kbd></h2>
             <br>
-              <a href="/MemberBR/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Tambah member Baru</a>
+            <h5>Temukan Teman Sparingmu Disini</h5>
+              
               
             </center>
             </div>
