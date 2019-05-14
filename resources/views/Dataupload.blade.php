@@ -27,7 +27,7 @@
       <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          
+          <a class="navbar-brand js-scroll-trigger" href="{{ url('/admin') }}">Back</a>
           <div class="box">
             <div class="box-header">
               <h3 class="box-title"><center><kbd>Bukti Transaksi</kbd></center></h3>

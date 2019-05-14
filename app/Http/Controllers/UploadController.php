@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB; 
 use App\Gambar;
 
 class UploadController extends Controller
@@ -38,6 +39,15 @@ class UploadController extends Controller
             'keterangan' => $request->keterangan
         ]);
  
-        return redirect()->back();
+        return view('/sukses') ;
+    }
+
+    public function hapus($id)
+    {
+    // menghapus data pegawai berdasarkan id yang dipilih
+    DB::table('gambar')->where('id',$id)->delete();
+        
+    // alihkan halaman ke halaman pegawai
+    return redirect('/Dataupload');
     }
 }

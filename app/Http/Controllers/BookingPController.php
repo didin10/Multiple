@@ -51,7 +51,7 @@ class BookingPController extends Controller
 
 
         ]);
-        return redirect('/home');
+        return view('/suksesbooking') ;
     }
 
     /**
