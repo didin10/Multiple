@@ -22,7 +22,6 @@ Route::prefix('admin')->group(function() {
 
 Route::get('/Adminlfc/Data_Lapangan','MenuAdmin1Controller@indexlapangan');
 
-
 Route::get('/Members','MemberController@index');
 Route::get('/Members/create','MemberController@create');
 Route::get('/Members/cari','MemberController@cari');
@@ -41,17 +40,12 @@ Route::get('/TambahBookingP','BookingPController@create');
 Route::post('/TambahdataBookingP','BookingPController@store');
 Route::get('/sukses','BookingPController@index');
 
-
-
-
-
 Route::resource('/Events','EventController');
 Route::get('/Events/create','EventController@create');
 Route::post('/Events/store','EventController@store');
 Route::get('/Events/edit/{id}','EventController@edit');
 Route::post('/Events/update','EventController@update');
 Route::get('/Events/hapus/{id}','EventController@hapus');
-
 
 Route::get('/DataBooking','BookingController@index');
 Route::get('/TambahBooking','BookingController@create');
@@ -70,17 +64,13 @@ Route::post('/Updatebayar/{id}','PembayaranController@update');
 Route::get('/Hapusbayar/{id}','PembayaranController@destroy');
 Route::get('/Datapembayaran/cari','PembayaranController@cari');
 
-
 Route::get('/tampilan_event','TampilanEventController@index');
-
 
 Route::resource('/Saran','SaranController');
 Route::get('/Tambahsaran','SaranController@create');
 Route::post('/Tambahdatasaran','SaranController@store');
 Route::get('/Hapus/{id_saran}','SaranController@destroy');
 Route::get('/sukses','SaranController@index');
-
-
 
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@proses_upload');

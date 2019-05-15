@@ -13,6 +13,6 @@ class TampilanEventController extends Controller
     {
 
          $even = Events::all();
-         return view('tampilan_event',compact('even'));
+         return view('Tampilan_Event.tampilan_event',compact('even'));
     }
 }
